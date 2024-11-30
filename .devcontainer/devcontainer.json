@@ -1,0 +1,22 @@
+{
+    "name": "Django Dev Environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "web",  // This is the service name from docker-compose.yml
+    "workspaceFolder": "/app",
+    "settings": {
+      "python.pythonPath": "/usr/local/bin/python",
+      "python.linting.pylintEnabled": true,
+      "editor.formatOnSave": true
+    },
+    "extensions": [
+      "ms-python.python",
+      "batisteo.vscode-django",
+      "eamodio.gitlens",
+      "dbaeumer.vscode-eslint",
+      "mhutchie.git-graph"
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "forwardPorts": [8000],
+    "remoteUser": "root"
+  }
+  
